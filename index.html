@@ -205,12 +205,31 @@ my-list ;; -> (1 2 3 4 5)
                                 </section>
 				<section>
                                   <h2>Wie unterhalten sich Clojure und Java?</h2>
-                                  <ul>
-                                    <li>Zugriff auf alle Java-Klassen und -Libs</li>
-                                    <li>Eigene Aufrufsyntax</li>
-                                    <li>Generierung von Java-Klassen zur Compilezeit</li>
-                                    <li>Clojure-Aufrufe aus Java heraus</li>
-                                  </ul>
+                                  <section>
+                                    <ul>
+                                      <li>Zugriff auf alle Java-Klassen und -Libs</li>
+                                      <li>Eigene Aufrufsyntax</li>
+                                      <li>Generierung von Java-Klassen zur Compilezeit</li>
+                                      <li>Clojure-Aufrufe aus Java heraus</li>
+                                    </ul>
+                                  </section>
+                                  <section>
+                                    <pre>
+                                      <code class=".language-clojure">
+(.toLowerCase "Inovex")
+
+(System/getProperty "java.vm.version")
+                                      </code>
+                                    </pre>
+                                  </section>
+                                  <section>
+                                    <pre>
+                                      <code class=".language-java">
+IFn plus = Clojure.var("clojure.core", "+");
+plus.invoke(1, 2);
+                                      </code>
+                                    </pre>
+                                  </section>
 				</section>
 
                                 <section>
