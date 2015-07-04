@@ -246,18 +246,19 @@ plus.invoke(1, 2);
 
                                 <section>
                                   <h2>...und was macht Clojure dagegen?</h2>
-                                  <ul>
-                                    <li>z.B. STM (Software Transactional Memory)</li>
-                                    <li>Ähnlich Transaktionen in DB-Systemen</li>
-                                    <li>Verschiedene Threads wollen Zustand ändern</li>
-                                    <li>Erster Thread "gewinnt"</li>
-                                    <li>Alle anderen versuchen es erneut</li>
-                                    <li>Transparent für den Entwickler</li>
-                                  </ul>
-                                </section>
-                                <section>
-                                  <pre>
-                                    <code class=".language-clojure">
+                                  <section>
+                                    <ul>
+                                      <li>z.B. STM (Software Transactional Memory)</li>
+                                      <li>Ähnlich Transaktionen in DB-Systemen</li>
+                                      <li>Verschiedene Threads wollen Zustand ändern</li>
+                                      <li>Erster Thread "gewinnt"</li>
+                                      <li>Alle anderen versuchen es erneut</li>
+                                      <li>Transparent für den Entwickler</li>
+                                    </ul>
+                                  </section>
+                                  <section>
+                                    <pre>
+                                      <code class=".language-clojure">
 (def my-ref (ref 0))
 
 (dotimes [n 1000]
@@ -267,10 +268,10 @@ plus.invoke(1, 2);
       (println (str "my-ref is " @my-ref)))))
 
 @my-ref                                     
-                                    </code>
-                                  </pre>
+                                      </code>
+                                    </pre>
+                                  </section>
                                 </section>
-
                                 <section>
                                   <h2>core.async</h2>
                                 </section>
