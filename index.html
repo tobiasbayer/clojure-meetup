@@ -124,7 +124,9 @@
 (defn add [a b]
   (+ a b))
 
-TODO let
+(defn add [a b]
+  (let [c (+ a b)]
+    (println (str a " + " b " = " c))))
                                       </code>
                                     </pre>
                                   </section>
