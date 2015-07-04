@@ -186,6 +186,18 @@ my-list ;; -> (1 2 3 4 5)
                                   </section>
                                   <section>
                                     Control Flow
+                                    <pre>
+                                      <code class=".language-clojure">
+(if (= a b)
+    (some-function a b)
+    (some-other-function a b))
+
+(cond
+  (= a b) (some-function a b)
+  (> a b) (some-other-function a b)
+  :else   (some-default-function a b))
+                                      </code>
+                                    </pre>
                                   </section>
                                   <section>
                                     Mehr: <a href="https://clojuredocs.org/" target="_blank">https://clojuredocs.org/</a>
