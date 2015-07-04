@@ -256,7 +256,19 @@ plus.invoke(1, 2);
                                   </ul>
                                 </section>
                                 <section>
-                                  <h2>Beispiel STM</h2>
+                                  <pre>
+                                    <code class=".language-clojure">
+(def my-ref (ref 0))
+
+(dotimes [n 1000]
+  (future
+    (dosync
+      (alter my-ref inc)
+      (println (str "my-ref is " @my-ref)))))
+
+@my-ref                                     
+                                    </code>
+                                  </pre>
                                 </section>
 
                                 <section>
