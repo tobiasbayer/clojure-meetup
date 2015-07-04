@@ -279,9 +279,25 @@ plus.invoke(1, 2);
                                   </section>
                                 </section>
                                 <section>
-                                  <h2>core.async</h2>
-                                </section>
+                                  <h2>core.async - Channels für Clojure</h2>
+                                  <pre>
+                                    <code>
+(require '[clojure.core.async :refer [chan put! &lt;!! go-loop]])
 
+(def my-chan (chan))
+
+(go-loop [] 
+  (do 
+    (println (str "Channel says: " (&lt;!! my-chan))) 
+    (recur)))
+
+(put! my-chan "foo")
+
+(put! my-chan "bar")
+                                    </code>
+                                  </pre>
+                                </section>
+                               
                                 <section>
                                   <h2>Literatur</h2>
                                   <ul>
