@@ -128,9 +128,11 @@
 (defn add [a b]
   (+ a b))
 
+;; "lokales" Binding
 (defn add [a b]
   (let [c (+ a b)]
-    (println (str a " + " b " = " c))))
+    (println (str a " + " b " = " c))
+    c))
                                       </code>
                                     </pre>
                                   </section>
