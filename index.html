@@ -87,7 +87,7 @@
                                 <section>
                                   <h2>Basics</h2>
                                   <section>
-                                    Prefix Notation
+                                    <h3>Prefix Notation</h3>
                                     <pre>
                                       <code class=".language-clojure">
 (+ 1 2)
@@ -95,7 +95,7 @@
                                     </pre>
                                   </section>
                                   <section>
-                                    Collections
+                                    <h3>Collections</h3>
                                     <pre>
                                       <code class=".language-clojure">
 ;; Vector 
@@ -113,7 +113,7 @@
                                   </section>
 
                                   <section>
-                                    Bindings und Funktionen
+                                    <h3>Bindings und Funktionen</h3>
                                     <pre>
                                       <code class=".language-clojure">
 ;; Konstante
@@ -132,7 +132,23 @@
                                     </pre>
                                   </section>
                                   <section>
-                                    Operationen auf Collections
+                                    <h3>Namespaces</h3>
+                                    <ul>
+                                      <li>Strukturieren der Sourcen</li>
+                                      <li>"Importieren" von Abhängigkeiten</li>
+                                    </ul>
+                                    <pre>
+                                      <code class=".language-clojure">
+(ns myapp.core
+  (:require [clojure.string :as s]))
+
+(defn my-split [v]
+  (s/split v #" ")) 
+                                      </code>
+                                    </pre>
+                                  </section>
+                                  <section>
+                                    <h3>Operationen auf Collections</h3>
                                     <pre>
                                       <code class=".language-clojure">
 (def my-list '(1 2 3 4 5))
@@ -148,7 +164,7 @@ my-list ;; -> (1 2 3 4 5)
                                     </pre>
                                   </section>
                                   <section>
-                                    Operationen auf Collections
+                                    <h3>Operationen auf Collections</h3>
                                     <pre>
                                       <code class=".language-clojure">
 (filter odd? my-list) ;; -> (1 3 5)
@@ -160,7 +176,7 @@ my-list ;; -> (1 2 3 4 5)
                                     </pre>
                                   </section>
                                   <section>
-                                    Operationen auf Collections
+                                    <h3>Operationen auf Collections</h3>
                                     <pre>
                                       <code class=".language-clojure">
 (range 10) ;; -> (0 1 2 3 4 5 6 7 8 9)
@@ -170,7 +186,7 @@ my-list ;; -> (1 2 3 4 5)
                                     </pre>
                                   </section>
                                   <section>
-                                    Operationen auf Collections
+                                    <h3>Operationen auf Collections</h3>
                                     <pre>
                                       <code class=".language-clojure">
 (def my-map {:name "foo" :firstname "bar" :city "munich"})
@@ -186,7 +202,7 @@ my-list ;; -> (1 2 3 4 5)
                                     </pre>
                                   </section>
                                   <section>
-                                    Control Flow
+                                    <h3>Control Flow</h3>
                                     <pre>
                                       <code class=".language-clojure">
 (if (= a b)
