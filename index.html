@@ -247,6 +247,32 @@ plus.invoke(1, 2);
                                       </code>
                                     </pre>
                                   </section>
+                                  <section>
+                                    <pre>
+                                      <code class=".language-clojure">
+(ns myapp.core
+  (:gen-class
+    (:name "com.myapp.MyClass")))
+
+(defn add [a b]
+  (+ a b))
+                                      </code>
+                                    </pre>
+                                  </section>
+                                  <section>
+                                    <pre>
+                                      <code class=".language-java">
+import com.myapp.MyClass;
+
+MyClass mc = new MyClass();
+System.out.println(mc.add(1, 2));
+                                      </code>
+                                    </pre>
+                                    <p class="fragment">
+                                      Die ganze Wahrheit: <a href="https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md#uberjar" target="_blank">Leiningen (AOT)</a>
+                                    </p>
+                                  </section>                                                                   
+
 				</section>
 
                                 <section>
