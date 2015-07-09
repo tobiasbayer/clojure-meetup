@@ -342,7 +342,7 @@ System.out.println(mc.add(1, 2));
 (def my-chan (chan))
 
 (go 
-  (let [[v c] (alts!! [(timeout 5000) my-chan])] 
+  (let [[v c] (alts!! [(timeout 10000) my-chan])] 
     (if (= c my-chan) 
         (println v) 
         (println "Timeout"))))
